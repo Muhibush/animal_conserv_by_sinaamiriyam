@@ -171,7 +171,27 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                        )
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Container(
+                            height: ScreenUtil.instance.setHeight(50),
+                            width: ScreenUtil.instance.setWidth(70),
+                            decoration: BoxDecoration(
+                                color: Color(0xFFC3B8B7),
+                                borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(20),
+                                  topLeft: Radius.circular(20)
+                                )
+                            ),
+                            alignment: Alignment.center,
+                            child: Icon(
+                              Icons.arrow_forward_ios,
+                              size: ScreenUtil.instance.setWidth(14),
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
                       ],
                     )
                   ),
