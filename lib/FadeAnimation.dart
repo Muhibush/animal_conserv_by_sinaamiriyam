@@ -5,7 +5,7 @@ class FadeAnimation extends StatelessWidget {
   final double delay;
   final Widget child;
 
-  FadeAnimation(this.delay, this.child);
+  const FadeAnimation({Key key, this.delay, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,12 @@ class FadeAnimation extends StatelessWidget {
       delay: Duration(milliseconds: (500 * delay).round()),
       duration: tween.duration,
       tween: tween,
+//      playback: Playback.START_OVER_FORWARD,
       child: child,
       builderWithChild: (context, child, animation) => Opacity(
         opacity: animation["opacity"],
         child: Transform.translate(
-            offset: Offset(0, animation["translateY"]),
+            offset: Offset(animation["translateY"],0),
             child: child
         ),
       ),
