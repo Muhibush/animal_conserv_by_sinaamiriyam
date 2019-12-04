@@ -60,6 +60,7 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Expanded(
                   child: ListView(
+                    physics: BouncingScrollPhysics(),
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.symmetric(
