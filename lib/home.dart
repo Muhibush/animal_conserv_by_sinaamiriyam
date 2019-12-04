@@ -83,76 +83,84 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: paddingLeft,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Discover',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: ScreenUtil.instance.setSp(28),
-                                  fontWeight: FontWeight.bold
+                      FadeAnimation(
+                        fadeDirection: FadeDirection.right,
+                        delay: 1,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: paddingLeft,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Discover',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: ScreenUtil.instance.setSp(28),
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              height: ScreenUtil.instance.setHeight(6),
-                            ),
-                            Text(
-                              'Protect our earth together.',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                fontSize: ScreenUtil.instance.setSp(15),
-                                color: Colors.white.withOpacity(0.4),
+                              SizedBox(
+                                height: ScreenUtil.instance.setHeight(6),
                               ),
-                            ),
-                          ],
+                              Text(
+                                'Protect our earth together.',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  fontSize: ScreenUtil.instance.setSp(15),
+                                  color: Colors.white.withOpacity(0.4),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        height: ScreenUtil.instance.setHeight(108),
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: listCategory.length,
-                          itemBuilder: (context, index){
-                            return Center(
-                              child: GestureDetector(
-                                onTap: (){
-                                  setState(() {
-                                    activeClassIndex=index;
-                                    itemCount = listCategory[activeClassIndex].length;
-                                  });
-                                },
-                                child: AnimatedContainer(
-                                  duration: Duration(milliseconds: 500),
-                                  margin: EdgeInsets.only(
-                                      left: index==0?paddingLeft:0
-                                  ),
-                                  height: ScreenUtil.instance.setHeight(31),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: ScreenUtil.instance.setWidth(20)
-                                  ),
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                      color: index==activeClassIndex?Color(0xFFFDCD00):Colors.transparent,
-                                      borderRadius: BorderRadius.all(Radius.circular(25))
-                                  ),
-                                  child: Text(
-                                    listCategory[index],
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                      fontSize: ScreenUtil.instance.setSp(15),
-                                      color: Colors.white,
+                      FadeAnimation(
+                        fadeDirection: FadeDirection.right,
+                        delay: 1.5,
+                        child: Container(
+                          height: ScreenUtil.instance.setHeight(108),
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: listCategory.length,
+                            itemBuilder: (context, index){
+                              return Center(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    setState(() {
+                                      activeClassIndex=index;
+                                      itemCount = listCategory[activeClassIndex].length;
+                                    });
+                                  },
+                                  child: AnimatedContainer(
+                                    duration: Duration(milliseconds: 500),
+                                    margin: EdgeInsets.only(
+                                        left: index==0?paddingLeft:0
+                                    ),
+                                    height: ScreenUtil.instance.setHeight(31),
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: ScreenUtil.instance.setWidth(20)
+                                    ),
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                        color: index==activeClassIndex?Color(0xFFFDCD00):Colors.transparent,
+                                        borderRadius: BorderRadius.all(Radius.circular(25))
+                                    ),
+                                    child: Text(
+                                      listCategory[index],
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                        fontSize: ScreenUtil.instance.setSp(15),
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            );
-                          },
+                              );
+                            },
+                          ),
                         ),
                       ),
                       ListCard(
