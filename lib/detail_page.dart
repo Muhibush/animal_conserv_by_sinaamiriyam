@@ -229,7 +229,6 @@ class _DetailPageState extends State<DetailPage> {
                           bottom: ScreenUtil.instance.setHeight(29),
                         ),
                         height: ScreenUtil.instance.setHeight(60),
-//                      width: ScreenUtil.instance.setWidth(90),
                         padding: EdgeInsets.symmetric(
                             horizontal: ScreenUtil.instance.setWidth(20)
                         ),

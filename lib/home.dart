@@ -1,5 +1,5 @@
 import 'package:animal_conserv_by_sinaamiriyam/FadeAnimation.dart';
-import 'package:animal_conserv_by_sinaamiriyam/listCard.dart';
+import 'package:animal_conserv_by_sinaamiriyam/animal_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -66,7 +66,6 @@ class _HomeState extends State<Home> {
                         padding: EdgeInsets.symmetric(
                           horizontal: paddingLeft,
                           vertical: ScreenUtil.instance.setHeight(29),
-//                    vertical: ScreenUtil.instance.setWidth(24),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -164,8 +163,20 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      ListCard(
-                        itemCount: itemCount,
+                      ListView.builder(
+                        itemCount: 5,
+                        physics: ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        itemBuilder: (context,index){
+                          String heroTag = "humingbird"+index.toString();
+                          return FadeAnimation(
+                            fadeDirection: FadeDirection.right,
+                            delay: 2+index/5,
+                            child: AnimalCard(
+                              heroTag: heroTag,
+                            ),
+                          );
+                        },
                       )
 
                     ],
