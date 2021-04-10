@@ -1,16 +1,12 @@
-# animal_conserv_by_sinaamiriyam
+# Animal Conserv by sinaamiriyam
 
-Animal Conservation app design by @sinaamiriyam
+Animal Conservation app design by [sinaamiriyam](https://www.instagram.com/sinaamiriam/)
 
-## Getting Started
+<img src= "https://user-images.githubusercontent.com/24708307/114258177-f5cc3880-99ee-11eb-8a3f-153fe3729449.jpg" width =600>
 
-This project is a starting point for a Flutter application.
+<img src= "https://user-images.githubusercontent.com/24708307/114258259-928ed600-99ef-11eb-8ea6-ae899e47ab5a.gif" width =600>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Follow me on 
+[Instagram](https://www.instagram.com/muhibush/)
+<br>
+[linkedin](https://www.linkedin.com/in/muhibush/) 
